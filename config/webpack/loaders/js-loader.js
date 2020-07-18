@@ -2,13 +2,13 @@ const path = require('path')
 
 module.exports = (options = {}) => ({
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', 'ts', 'tsx']
   },
 
   module: {
     rules: [
       {
-        test: /\.js?$/u,
+        test: /\.(js|ts)x?$/u,
         exclude: /node_modules/u,
         use: {
           loader: 'babel-loader',
